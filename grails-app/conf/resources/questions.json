@@ -1,0 +1,377 @@
+{
+  "numPages" : 3,
+  "page0" : {
+    "num" :12,
+    "1" : {
+      "sectionTitle" : "Please fill out company information",
+      "label" : "Company Name",
+      "name" : "compName",
+      "type" : "text",
+      "value" : ""
+    },
+    "2" : {
+      "label" : "Position",
+      "name" : "compPosition",
+      "type" : "text",
+      "value" : ""
+    },
+    "3" : {
+      "label" : "Are you currently using a CRM?",
+      "name" : "usingCRM",
+      "type" : "select",
+      "value" : ["Yes", "No"]
+    },
+    "4" : {
+      "label" : "Email",
+      "name" : "email",
+      "type" : "text",
+      "value" : ""
+    },
+    "5" : {
+      "label" : "Office Phone #",
+      "name" : "phoneNum",
+      "type" : "text",
+      "value" : ""
+    },
+    "6" : {
+      "sectionTitle" : "Please tell us about your business",
+      "label" : "Size of business",
+      "name" : "businessSize",
+      "type" : "select",
+      "value" : ["1-10", "11-20", "21-50", "51-100", "101+"]
+    },
+    "7" : {
+      "label" : "Turn over",
+      "name" : "turnOver",
+      "type" : "select",
+      "value" : ["<1000000", "1-5m", "5-10m", "10-15m", "15-20m"]
+    },
+    "8" : {
+      "label" : "Leads / Week",
+      "name" : "leadsWeek",
+      "type" : "select",
+      "value" : ["1-5", "5-20", "20-50", "50-100", "100+"]
+    },
+    "9" : {
+      "label" : "Database size",
+      "name" : "dbSize",
+      "type" : "select",
+      "value" : ["0-5000", "5000-15000", "15000-50000", "50000-100000"]
+    },
+    "10" : {
+      "label" : "How is data stored",
+      "name" : "dataStrgType",
+      "type" : "select",
+      "value" : ["Selection 1", "Selection 2", "Selection 3", "Selection 4", "Selection 5"]
+    },
+    "11" : {
+      "label" : "Automations",
+      "name" : "automations",
+      "type" : "select",
+      "value" : ["Web to lead", "Sales Process", "Templates", "Checklists", "Invoicing"]
+    },
+    "12" : {
+      "label" : "Software to sync with",
+      "name" : "syncsoftware",
+      "type" : "select",
+      "value" : ["Selection 1", "Selection 2", "Selection 3", "Selection 4", "Selection 5"]
+    }
+
+  },
+  "page1" : {
+    "num": 38,
+    "1" : {
+      "label" : "Do you need calendar management ?",
+      "name" : "gf1",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "ttm"
+    },
+    "2" : {
+      "label" : "Do you need call management/recording ?",
+      "name" : "gf2",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "3" : {
+      "label" : "Do you need campaign management ?",
+      "name" : "gf3",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "mkt"
+    },
+    "4" : {
+      "label" : "Do you need contact management ?",
+      "name" : "gf4",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "cdm"
+    },
+    "5" : {
+      "label" : "Do you need customer database ?",
+      "name" : "gf5",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "cdm"
+    },
+    "6" : {
+      "label" : "Do you need customer portal ?",
+      "name" : "gf6",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "cdm"
+    },
+    "7" : {
+      "label" : "Do you need dashboard views ?",
+      "name" : "gf7",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "das"
+    },
+    "8" : {
+      "label" : "Do you need document management ?",
+      "name" : "gf8",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "9" : {
+      "label" : "Do you need email marketing ?",
+      "name" : "gf9",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "mkt"
+    },
+    "10" : {
+      "label" : "Do you need highly customizable ?",
+      "name" : "gf10",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "gen"
+    },
+    "11" : {
+      "label" : "Do you need scheduling ?",
+      "name" : "gf11",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "12" : {
+      "label" : "Do you need procurment list ?",
+      "name" : "gf12",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "13" : {
+      "label" : "Do you need time management ?",
+      "name" : "gf13",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "14" : {
+      "label" : "Do you need supplier communication ?",
+      "name" : "gf14",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "15" : {
+      "label" : "Do you need invoicing from CRM ?",
+      "name" : "gf15",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "16" : {
+      "label" : "Do you need lead management ?",
+      "name" : "gf16",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "17" : {
+      "label" : "Do you need mobile app ?",
+      "name" : "gf17",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "gen"
+    },
+    "18" : {
+      "label" : "Do you need opportunity management ?",
+      "name" : "gf18",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "19" : {
+      "label" : "Do you need pipeline management ?",
+      "name" : "gf19",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "20" : {
+      "label" : "Do you need project management ?",
+      "name" : "gf20",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "21" : {
+      "label" : "Do you need project milestone tracking ?",
+      "name" : "gf21",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "22" : {
+      "label" : "Do you need quotes/proposals management ?",
+      "name" : "gf22",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "23" : {
+      "label" : "Do you need reporting ?",
+      "name" : "gf23",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "gen"
+    },
+    "24" : {
+      "label" : "Do you need sales forecasting ?",
+      "name" : "gf24",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "25" : {
+      "label" : "Do you need task management ?",
+      "name" : "gf25",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "ttm"
+    },
+    "26" : {
+      "label" : "Do you need team management ?",
+      "name" : "gf26",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "ttm"
+    },
+    "27" : {
+      "label" : "Do you need territory management ?",
+      "name" : "gf27",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "sls"
+    },
+    "28" : {
+      "label" : "Do you need time sheets ?",
+      "name" : "gf28",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "prm"
+    },
+    "29" : {
+      "label" : "Do you need web-to-lead ?",
+      "name" : "gf29",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "gen"
+    },
+    "30" : {
+      "label" : "Do you need workflow management ?",
+      "name" : "gf30",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "gen"
+    },
+    "31" : {
+      "label" : "Do you need email sync ?",
+      "name" : "i1",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "32" : {
+      "label" : "Do you need mail sync ?",
+      "name" : "i2",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "33" : {
+      "label" : "Do you need accounting (Xero, MYOB, Quickbooks) ?",
+      "name" : "i3",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "34" : {
+      "label" : "Do you need documents (Google Drive, Dropbox) ?",
+      "name" : "i4",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "35" : {
+      "label" : "Do you need marketing (Mailchimp, etc) ?",
+      "name" : "i5",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "36" : {
+      "label" : "Do you need project management/tracking ?",
+      "name" : "i6",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "37" : {
+      "label" : "Do you need survey management (Survey Monkey, etc) ?",
+      "name" : "i7",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    },
+    "38" : {
+      "label" : "Do you need timesheets ?",
+      "name" : "i8",
+      "type" : "switch",
+      "value" : ["No", "Yes"],
+      "category" : "int"
+    }
+  },
+  "page2" : {
+    "num": 4,
+    "1" : {
+      "label" : "Company Name",
+      "name" : "compName",
+      "type" : "text",
+      "value" : ""
+    },
+    "2" : {
+      "label" : "First Name",
+      "name" : "firstName",
+      "type" : "text",
+      "value" : ""
+    },
+    "3" : {
+      "label" : "Last Name",
+      "name" : "lastName",
+      "type" : "text",
+      "value" : ""
+    },
+    "4" : {
+      "label" : "Daytime Phone #",
+      "name" : "phoneNum",
+      "type" : "text",
+      "value" : ""
+    }
+  }
+}
