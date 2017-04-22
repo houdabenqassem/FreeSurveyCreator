@@ -25,7 +25,7 @@ class QuestionSpec extends Specification {
     def cleanup() {
     }
 
-    void "Test if question handles"() {
+    void "Test question basics"() {
         given:
         setup()
         when: "question field is type text"
