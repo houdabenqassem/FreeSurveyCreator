@@ -9,7 +9,10 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        // "/"(view:"/index")
+
+        "/" (controller: "survey", action: "showSurvey", params: [])
+
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

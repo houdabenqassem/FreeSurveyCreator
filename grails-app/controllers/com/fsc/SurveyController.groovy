@@ -1,14 +1,19 @@
 package com.fsc
 
+import freesurveycreator.SurveyService
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class SurveyController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", showSurvey: "GET"]
+
+    def SurveyService surveyService
 
     def index(Integer max) {
+        service.loadSurveyJson()
         params.max = Math.min(max ?: 10, 100)
         respond Survey.list(params), model:[surveyCount: Survey.count()]
     }
@@ -103,5 +108,13 @@ class SurveyController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    def showSurvey() {
+        def survey = surveyService.getSurvey()
+
+        println survey
+
+        render(view: "showSurvey")
     }
 }
