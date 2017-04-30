@@ -33,7 +33,7 @@ class SurveyService {
     }
 
     def isLastPage() {
-        return currentPageNumber == totalNumberPages
+        return (currentPageNumber+1) == totalNumberPages
     }
 
     def getSurvey() {

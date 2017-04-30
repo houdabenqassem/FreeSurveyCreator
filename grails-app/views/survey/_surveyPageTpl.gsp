@@ -26,6 +26,14 @@
                         </g:each>
                     </select>
                 </g:if>
+
+            <!-- type=switch: A switch -->
+                <g:if test="${question.value.type == "switch"}">
+                    <div class="input-group" id="${question.value.name}">
+                        <input type="checkbox" data-toggle="toggle" data-on="${question.value.value[0]}" data-off="${question.value.value[1]}">
+                    </div>
+                </g:if>
+
             </div>
         </div>
 

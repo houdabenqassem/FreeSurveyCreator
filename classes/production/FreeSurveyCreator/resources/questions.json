@@ -84,266 +84,266 @@
       "label" : "Do you need calendar management ?",
       "name" : "gf1",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "ttm"
     },
     "2" : {
       "label" : "Do you need call management/recording ?",
       "name" : "gf2",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "3" : {
       "label" : "Do you need campaign management ?",
       "name" : "gf3",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "mkt"
     },
     "4" : {
       "label" : "Do you need contact management ?",
       "name" : "gf4",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "cdm"
     },
     "5" : {
       "label" : "Do you need customer database ?",
       "name" : "gf5",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "cdm"
     },
     "6" : {
       "label" : "Do you need customer portal ?",
       "name" : "gf6",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "cdm"
     },
     "7" : {
       "label" : "Do you need dashboard views ?",
       "name" : "gf7",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "das"
     },
     "8" : {
       "label" : "Do you need document management ?",
       "name" : "gf8",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "9" : {
       "label" : "Do you need email marketing ?",
       "name" : "gf9",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "mkt"
     },
     "10" : {
       "label" : "Do you need highly customizable ?",
       "name" : "gf10",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "gen"
     },
     "11" : {
       "label" : "Do you need scheduling ?",
       "name" : "gf11",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "12" : {
       "label" : "Do you need procurment list ?",
       "name" : "gf12",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "13" : {
       "label" : "Do you need time management ?",
       "name" : "gf13",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "14" : {
       "label" : "Do you need supplier communication ?",
       "name" : "gf14",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "15" : {
       "label" : "Do you need invoicing from CRM ?",
       "name" : "gf15",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "16" : {
       "label" : "Do you need lead management ?",
       "name" : "gf16",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "17" : {
       "label" : "Do you need mobile app ?",
       "name" : "gf17",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "gen"
     },
     "18" : {
       "label" : "Do you need opportunity management ?",
       "name" : "gf18",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "19" : {
       "label" : "Do you need pipeline management ?",
       "name" : "gf19",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "20" : {
       "label" : "Do you need project management ?",
       "name" : "gf20",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "21" : {
       "label" : "Do you need project milestone tracking ?",
       "name" : "gf21",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "22" : {
       "label" : "Do you need quotes/proposals management ?",
       "name" : "gf22",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "23" : {
       "label" : "Do you need reporting ?",
       "name" : "gf23",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "gen"
     },
     "24" : {
       "label" : "Do you need sales forecasting ?",
       "name" : "gf24",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "25" : {
       "label" : "Do you need task management ?",
       "name" : "gf25",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "ttm"
     },
     "26" : {
       "label" : "Do you need team management ?",
       "name" : "gf26",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "ttm"
     },
     "27" : {
       "label" : "Do you need territory management ?",
       "name" : "gf27",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "sls"
     },
     "28" : {
       "label" : "Do you need time sheets ?",
       "name" : "gf28",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "prm"
     },
     "29" : {
       "label" : "Do you need web-to-lead ?",
       "name" : "gf29",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "gen"
     },
     "30" : {
       "label" : "Do you need workflow management ?",
       "name" : "gf30",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "gen"
     },
     "31" : {
       "label" : "Do you need email sync ?",
       "name" : "i1",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "32" : {
       "label" : "Do you need mail sync ?",
       "name" : "i2",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "33" : {
       "label" : "Do you need accounting (Xero, MYOB, Quickbooks) ?",
       "name" : "i3",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "34" : {
       "label" : "Do you need documents (Google Drive, Dropbox) ?",
       "name" : "i4",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "35" : {
       "label" : "Do you need marketing (Mailchimp, etc) ?",
       "name" : "i5",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "36" : {
       "label" : "Do you need project management/tracking ?",
       "name" : "i6",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "37" : {
       "label" : "Do you need survey management (Survey Monkey, etc) ?",
       "name" : "i7",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     },
     "38" : {
       "label" : "Do you need timesheets ?",
       "name" : "i8",
       "type" : "switch",
-      "value" : ["No", "Yes"],
+      "value" : ["Yes", "No"],
       "category" : "int"
     }
   },

@@ -112,24 +112,19 @@ class SurveyController {
 
     def showSurvey() {
         def survey = surveyService.getSurvey()
+        def page = survey.pages.get("page" + surveyService.getCurrentPageNumber())
+
         println "Rendering View"
-        render(view: "showSurvey", model: [surveyPages: survey])
+        render(view: "showSurvey", model: [page: page, nmPages: survey.getNumPages(), currentPageNum : surveyService.getCurrentPageNumber()])
     }
 
     def incresePageNumber() {
-
         surveyService.increasePageNumber()
-
-        println "Increasing " + surveyService.getCurrentPageNumber()
-
         redirect(action: "showSurvey")
     }
 
     def decresePageNumber() {
         surveyService.decreasePageNumber()
-
-        println "Decreasing " + surveyService.getCurrentPageNumber()
-
         redirect(action: "showSurvey")
     }
 }
