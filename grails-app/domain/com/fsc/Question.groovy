@@ -6,7 +6,7 @@ class Question {
     String label        /* Define the label with the question */
     String name         /* field identifier */
     String type         /* type of widget: text, select, yes/no switch */
-    String value        /* values to choose from */
+    List<String> value  /* values to choose from */
     String category     /* */
 
     static constraints = {

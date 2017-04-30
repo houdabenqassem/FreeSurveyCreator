@@ -1,18 +1,39 @@
-package freesurveycreator
+package com.fsc
 
-import com.fsc.Page
-import com.fsc.Question
-import com.fsc.Survey
 import grails.converters.JSON
-import org.grails.core.io.ResourceLocator
 
 class SurveyService {
 
     def filePath = "resources/questions.json"
     def Survey survey
+    def currentPageNumber = 0
+    def answers = []
+    def totalNumberPages
 
     SurveyService() {
         loadSurveyJson()
+    }
+
+    def getCurrentPageNumber() {
+        return currentPageNumber
+    }
+
+    def increasePageNumber() {
+        currentPageNumber++
+        println currentPageNumber
+    }
+
+    def decreasePageNumber() {
+        currentPageNumber--
+        println currentPageNumber
+    }
+
+    def getPageAnswers() {
+        return answers
+    }
+
+    def isLastPage() {
+        return currentPageNumber == totalNumberPages
     }
 
     def getSurvey() {
@@ -36,6 +57,8 @@ class SurveyService {
         def text = this.class.classLoader.getResourceAsStream(filePath).getText()
         def json = JSON.parse(text)
 
+        totalNumberPages = json.numPages
+
         survey = new Survey(numPages: json.numPages)
 
         for (int i=0; i<survey.numPages; i++) {
@@ -45,6 +68,7 @@ class SurveyService {
 
             for (int j=1; j<=pageJson.num; j++) {
                 def questionsJson = pageJson["" + j]
+
                 Question question = new Question(
                         sectionTitle: questionsJson.sectionTitle,
                         label: questionsJson.label,

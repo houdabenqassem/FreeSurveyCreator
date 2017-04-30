@@ -1,4 +1,4 @@
-package freesurveycreator
+package com.fsc
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
@@ -17,6 +17,6 @@ class SurveyServiceSpec extends Specification {
 
     void "test something"() {
         expect:"fix me"
-        true == true
+        true == false
     }
 }

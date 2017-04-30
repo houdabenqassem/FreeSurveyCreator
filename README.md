@@ -17,4 +17,7 @@ What requirements will not be handled by this application:
   
   - Create the controller: grails generate-all Survey
   
-  - Create service grails: create-service Survey
+  - Create service grails: grails create-service com.fsc.Survey
+  
+  - Create Taglib grails create-taglib com.fsc.SurveyPage
+    and the template file used in the tag lib and Build project to generate views inside Survey (classes/production) . 

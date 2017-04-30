@@ -1,6 +1,6 @@
 package com.fsc
 
-import freesurveycreator.SurveyService
+import com.fsc.SurveyService
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class SurveyController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", showSurvey: "GET"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", showSurvey: "GET", incresePageNumber: "POST", decresePageNumber: "POST"]
 
     def SurveyService surveyService
 
@@ -112,9 +112,24 @@ class SurveyController {
 
     def showSurvey() {
         def survey = surveyService.getSurvey()
+        println "Rendering View"
+        render(view: "showSurvey", model: [surveyPages: survey])
+    }
 
-        println survey
+    def incresePageNumber() {
 
-        render(view: "showSurvey")
+        surveyService.increasePageNumber()
+
+        println "Increasing " + surveyService.getCurrentPageNumber()
+
+        redirect(action: "showSurvey")
+    }
+
+    def decresePageNumber() {
+        surveyService.decreasePageNumber()
+
+        println "Decreasing " + surveyService.getCurrentPageNumber()
+
+        redirect(action: "showSurvey")
     }
 }
