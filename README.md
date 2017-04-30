@@ -20,4 +20,19 @@ What requirements will not be handled by this application:
   - Create service grails: grails create-service com.fsc.Survey
   
   - Create Taglib grails create-taglib com.fsc.SurveyPage
-    and the template file used in the tag lib and Build project to generate views inside Survey (classes/production) . 
+    and the template file used in the tag lib and Build project to generate views inside Survey (classes/production).
+  
+  `Instructions on How to use the Survey:`
+  
+  - JSON schema for survey The file: resources/questions.json is the data source file used to drive they survey rendering. A survey is composed of pages. Each page is a collection of questions. Questions within a page can be grouped in sections (with a section title) The survey schema should follow these rules:
+  
+  1. numPages attribute with the number of pages (N pages)
+  2. each page is defined as page0 ... pageN-1
+  3. for each page define a number of questions by specifying the parameter: num
+  4. each question is defined with a number 1 to num
+  5. within each question specify: 
+      a) a sectionTitle field is a section title is needed to group questions 
+      b) a label to define the text for the question 
+      c) a name to identify the question 
+      d) a type to identify the type of ui widget to answer. The current types supported are: (text: for a text box, select: for a drop donw list, switch: for a two way exclusive choice) 
+      e) a value to defines values to choose from for select and switch components. It is important to keep in mind these rules when editing the resources/questions.json file. This files drives the page building therefore an error on this file will break the parsing and the survey model building
