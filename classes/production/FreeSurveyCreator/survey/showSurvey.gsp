@@ -22,7 +22,7 @@
     <h3>Page: <span class="label label-info">${currentPageNum+1}</span> of <span class="label label-info">${nmPages}</span></h3>
 </div>
 
-<form class="form-horizontal" role="form" style="width: 80%;">
+<form class="form-horizontal" role="form" style="width: 80%;" pageNumber="${currentPageNum}">
     <g:showSurveyPage page="${page}" answers="${svr.getPageAnswers()}"/>
 
     <div class="form-group">
@@ -45,17 +45,63 @@
 </form>
 
 <script>
+    var getAnswers = function() {
+        var elements = $('.uicontrol');
+        var pageAnswer = {
+            pageNumber : $('form').attr('pageNumber'),
+            answers : []
+        };
+        for (var i in elements) {
+            if (! isNaN(i)) {
+                var uielement = elements[i];
+                var type = $(uielement).attr('comptype');
+                if (type) {
+                    var id = $(uielement).attr('id');
+                    var answer;
+                    if (type == 'text') {
+                        answer = $(uielement).val().trim();
+                    } else if (type == 'select') {
+                        answer = $('#' + id + '  option:selected').text().trim();
+                    } else if (type == 'switch') {
+                        answer = $('#' + id).prop('checked') ? 0 : 1;
+                    }
+                    var answerObj = {
+                        questionId : id,
+                        question : $('#' + id + 'Label').text(),
+                        questionType : $(uielement).attr('comptype'),
+                        answer : answer
+                    };
+                    pageAnswer.answers.push(answerObj)
+                }
+            }
+        }
+        return pageAnswer;
+    }
     $('#nextPageId').click(function(event) {
         event.preventDefault();
-        $.ajax({ url: "/survey/incresePageNumber", type: 'POST', success: function(resp) {
-            window.location.reload();
-        } });
+        var bodyData = getAnswers();
+        console.log(bodyData);
+        $.ajax({ url: "/survey/incresePageNumber",
+            type: 'POST',
+            data: JSON.stringify(bodyData),
+            contentType: "application/json; charset=utf-8",
+            success: function(resp) {
+                window.location.reload();
+            }
+        });
     });
     $('#prevPageId').click(function(event) {
         event.preventDefault();
-        $.ajax({ url: "/survey/decresePageNumber", type: 'POST', success: function(resp) {
-            window.location.reload();
-        } });
+        var bodyData = getAnswers();
+        console.log(bodyData);
+        $.ajax({ url: "/survey/decresePageNumber",
+            type: 'POST',
+            data: JSON.stringify(bodyData),
+            contentType: "application/json; charset=utf-8",
+            success: function(resp) {
+                window.location.reload();
+            }
+        });
     });
 </script>
 

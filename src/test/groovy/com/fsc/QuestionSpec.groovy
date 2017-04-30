@@ -29,10 +29,10 @@ class QuestionSpec extends Specification {
         given:
         setup()
         when: "question field is type text"
-        question.value = "default value"
+        question.value = Arrays.asList("default value")
         question.category = "category1"
         then: "Validation returns false"
-        question.value == "default value"
+        question.value == Arrays.asList("default value")
         question.category == "category1"
         question.type == "text"
     }

@@ -13,7 +13,7 @@ What requirements will not be handled by this application:
 
   - Create the application: grails create-app FreeSurveyCreator
   
-  - Create domain classes: grails create-domain-class com.fsc.Survey grails create-domain-class com.fsc.Page grails create-domain-class com.fsc.Question
+  - Create domain classes: grails create-domain-class com.fsc.Survey grails create-domain-class com.fsc.Page grails create-domain-class com.fsc.Question grails create-domain-class com.fsc.Answer
   
   - Create the controller: grails generate-all Survey
   

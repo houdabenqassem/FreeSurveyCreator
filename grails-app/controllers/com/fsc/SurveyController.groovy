@@ -119,11 +119,19 @@ class SurveyController {
     }
 
     def incresePageNumber() {
+        def data = request.JSON
+
+        println data
+
         surveyService.increasePageNumber()
         redirect(action: "showSurvey")
     }
 
     def decresePageNumber() {
+        def data = request.JSON
+
+        println data
+
         surveyService.decreasePageNumber()
         redirect(action: "showSurvey")
     }
