@@ -20,6 +20,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
+        <th></th>
         <th>Company</th>
         <th>First Name</th>
         <th>Last Name</th>
@@ -29,6 +30,13 @@
     <tbody>
     <g:each var="survey" in="${surveys}" status="index">
         <tr>
+            <td>
+                <g:link controller="survey"
+                        action="showSurveyDetails"
+                        params="[surveyId: survey.getId()]"
+                        class="class">${index}
+                </g:link>
+            </td>
             <td>${survey.pages.get("page" + (survey.numPages-1)).answers.get('compName').answer}</td>
             <td>${survey.pages.get("page" + (survey.numPages-1)).answers.get('firstName').answer}</td>
             <td>${survey.pages.get("page" + (survey.numPages-1)).answers.get('lastName').answer}</td>

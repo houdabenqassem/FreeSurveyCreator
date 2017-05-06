@@ -12,7 +12,8 @@ class SurveyController {
                              incresePageNumber: "POST",
                              decresePageNumber: "POST",
                              submitSurvey : "POST",
-                             listSurveyResults: "GET"
+                             listSurveyResults: "GET",
+                             showSurveyDetails: "GET"
     ]
 
     def SurveyService surveyService
@@ -162,5 +163,13 @@ class SurveyController {
         def surveys = surveyService.getSurveys();
 
         render(view: "listSurveyResults", model: [surveys: surveys])
+    }
+
+    def showSurveyDetails() {
+        def id = params.surveyId
+
+        def survey = surveyService.getSurveyById(id);
+
+        render(view: "showSurveyDetails", model: [survey: survey])
     }
 }

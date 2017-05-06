@@ -51,7 +51,6 @@
             pageNumber : $('form').attr('pageNumber'),
             answers : []
         };
-        console.log(pageAnswer);
         for (var i in elements) {
             if (! isNaN(i)) {
                 var uielement = elements[i];
@@ -104,12 +103,11 @@
     });
     $('#submitSurvey').click(function(event) {
         event.preventDefault();
-        var bodyData = getAnswers();
+        console.log('submitting');
         $.ajax({ url: "/survey/submitSurvey",
-            type: 'POST',
-            data: JSON.stringify(bodyData),
-            contentType: "application/json; charset=utf-8",
+            type: 'GET',
             success: function(resp) {
+                console.log(resp);
                 $('body').empty();
                 $('body').append($(resp));
             }

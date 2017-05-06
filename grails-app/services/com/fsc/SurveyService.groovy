@@ -11,6 +11,7 @@ class SurveyService {
     def totalNumberPages
 
     List<Survey> savedSurveys = new ArrayList<Survey>();
+    int surveyId = 0;
 
     SurveyService() {
         loadSurveyJson()
@@ -117,6 +118,8 @@ class SurveyService {
      */
     def saveSurvey() {
         //survey.save(flush:true) // Save to DB
+        surveyId++;
+        survey.setId(surveyId)
         savedSurveys.add(survey);
     }
 
@@ -126,5 +129,14 @@ class SurveyService {
      */
     def getSurveys() {
         return savedSurveys;
+    }
+
+    def getSurveyById(id) {
+        for (Survey s : savedSurveys) {
+            if (s.id == Integer.valueOf(id)) {
+                return survey
+            }
+        }
+        return null
     }
 }
