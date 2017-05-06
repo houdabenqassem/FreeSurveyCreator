@@ -51,6 +51,7 @@
             pageNumber : $('form').attr('pageNumber'),
             answers : []
         };
+        console.log(pageAnswer);
         for (var i in elements) {
             if (! isNaN(i)) {
                 var uielement = elements[i];
@@ -80,7 +81,6 @@
     $('#nextPageId').click(function(event) {
         event.preventDefault();
         var bodyData = getAnswers();
-        console.log(bodyData);
         $.ajax({ url: "/survey/incresePageNumber",
             type: 'POST',
             data: JSON.stringify(bodyData),
@@ -93,13 +93,25 @@
     $('#prevPageId').click(function(event) {
         event.preventDefault();
         var bodyData = getAnswers();
-        console.log(bodyData);
         $.ajax({ url: "/survey/decresePageNumber",
             type: 'POST',
             data: JSON.stringify(bodyData),
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
                 window.location.reload();
+            }
+        });
+    });
+    $('#submitSurvey').click(function(event) {
+        event.preventDefault();
+        var bodyData = getAnswers();
+        $.ajax({ url: "/survey/submitSurvey",
+            type: 'POST',
+            data: JSON.stringify(bodyData),
+            contentType: "application/json; charset=utf-8",
+            success: function(resp) {
+                $('body').empty();
+                $('body').append($(resp));
             }
         });
     });

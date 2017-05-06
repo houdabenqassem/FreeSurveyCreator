@@ -9,6 +9,8 @@ class Question {
     List<String> value  /* values to choose from */
     String category     /* */
 
+    static mapWith = "mongo"
+
     static constraints = {
     }
 }

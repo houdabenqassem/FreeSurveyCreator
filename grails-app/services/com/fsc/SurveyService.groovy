@@ -10,6 +10,8 @@ class SurveyService {
     def answers = []
     def totalNumberPages
 
+    List<Survey> savedSurveys = new ArrayList<Survey>();
+
     SurveyService() {
         loadSurveyJson()
     }
@@ -84,5 +86,45 @@ class SurveyService {
             survey.pages.put("page" + i, page)
 
         }
+    }
+
+    /**
+     * update the survey page with answers
+     * @param answersJSON
+     * @return
+     */
+    def updateAnswers(answersJSON) {
+        def page = survey.pages.get("page" + answersJSON.pageNumber)
+        page.answers.clear()
+
+        for (int i=0; i<answersJSON.answers.size(); i++) {
+
+            def obj = answersJSON.answers.get(i)
+
+            def answer = new Answer(questionId : obj.questionId,
+                    question : obj.question,
+                    answer : obj.answer,
+                    questionType : obj.questionType)
+
+            page.answers.put(obj.questionId, answer)
+        }
+
+        println survey
+    }
+
+    /**
+     * Save a single survey
+     */
+    def saveSurvey() {
+        //survey.save(flush:true) // Save to DB
+        savedSurveys.add(survey);
+    }
+
+    /**
+     * Return all the saved surveys
+     * @return
+     */
+    def getSurveys() {
+        return savedSurveys;
     }
 }

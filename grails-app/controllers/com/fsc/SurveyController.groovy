@@ -8,7 +8,12 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class SurveyController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", showSurvey: "GET", incresePageNumber: "POST", decresePageNumber: "POST"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", showSurvey: "GET",
+                             incresePageNumber: "POST",
+                             decresePageNumber: "POST",
+                             submitSurvey : "POST",
+                             listSurveyResults: "GET"
+    ]
 
     def SurveyService surveyService
 
@@ -110,29 +115,52 @@ class SurveyController {
         }
     }
 
+    /**
+     * entry point to render survey
+     * @return
+     */
     def showSurvey() {
         def survey = surveyService.getSurvey()
         def page = survey.pages.get("page" + surveyService.getCurrentPageNumber())
 
-        println "Rendering View"
         render(view: "showSurvey", model: [page: page, nmPages: survey.getNumPages(), currentPageNum : surveyService.getCurrentPageNumber()])
     }
 
+    /**
+     * Next button handler
+     * @return
+     */
     def incresePageNumber() {
         def data = request.JSON
-
-        println data
+        surveyService.updateAnswers(data)
 
         surveyService.increasePageNumber()
         redirect(action: "showSurvey")
     }
 
+    /**
+     * Previous button handler
+     * @return
+     */
     def decresePageNumber() {
         def data = request.JSON
-
-        println data
+        surveyService.updateAnswers(data)
 
         surveyService.decreasePageNumber()
         redirect(action: "showSurvey")
+    }
+
+    def submitSurvey() {
+        def data = request.JSON
+        surveyService.updateAnswers(data)
+
+        surveyService.saveSurvey()
+        render(view: "submitSurvey")
+    }
+
+    def listSurveyResults() {
+        def surveys = surveyService.getSurveys();
+
+        render(view: "listSurveyResults", model: [surveys: surveys])
     }
 }
