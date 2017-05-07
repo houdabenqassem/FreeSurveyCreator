@@ -21,6 +21,9 @@ What requirements will not be handled by this application:
   
   - Create Taglib grails create-taglib com.fsc.SurveyPage
     and the template file used in the tag lib and Build project to generate views inside Survey (classes/production).
+  - Add `Spring-Security-core` to `build.gradle` and compile. 
+  - Create Spring related Security domain classes in `com.fsc` package: `grails s2-quickstart com.fsc User Role --groupClassName=RoleGroup`
+
   
   `Instructions on How to use the Survey:`
   
@@ -36,3 +39,15 @@ What requirements will not be handled by this application:
       c) a name to identify the question 
       d) a type to identify the type of ui widget to answer. The current types supported are: (text: for a text box, select: for a drop donw list, switch: for a two way exclusive choice) 
       e) a value to defines values to choose from for select and switch components. It is important to keep in mind these rules when editing the resources/questions.json file. This files drives the page building therefore an error on this file will break the parsing and the survey model building
+      
+   **How To use the App**
+   
+   1. run the application
+   open http://localhost:8080 to go to the survey page and fill out the survey.
+   2. once a number of surveys has been filled out, open http://localhost:8080/amin to go the admin area and view the list of surveys that have been filled out
+   
+   **`ISSUE`** 
+    
+   Spring security: After runnig the command: grails s2-quickstart com.fsc User Role --groupClassName=RoleGroup the domain classes were properly generated. However after adding the compile dependency in the build.gradle file: compile "org.grails.plugins:spring-security-core:3.1.1" the import: import grails.plugin.springsecurity.annotation.Secured does not resolve, hence could not use the annotation: @Secured([Role.ROLE_ADMIN, Role.ROLE_USER]) to secure the admin area to list the surveys.
+   
+   
