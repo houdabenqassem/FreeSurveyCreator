@@ -121,6 +121,10 @@ class SurveyService {
         surveyId++;
         survey.setId(surveyId)
         savedSurveys.add(survey);
+
+        // Reset the survey (for demo purpose) so you can take more than one
+        currentPageNumber = 0
+        answers = []
     }
 
     /**
