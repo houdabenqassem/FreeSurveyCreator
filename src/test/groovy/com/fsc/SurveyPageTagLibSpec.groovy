@@ -9,14 +9,26 @@ import spock.lang.Specification
 @TestFor(SurveyPageTagLib)
 class SurveyPageTagLibSpec extends Specification {
 
+    Map render
+    Page page = new Page()
+    def answers = []
+
     def setup() {
+        tagLib.metaClass.render = { Map attrs ->
+            render = attrs
+        }
+
+        page.questions = [:].withDefault{key -> return 0}
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-        true == false
+    void "Test showSurveyPage"() {
+        when:
+        tagLib.showSurveyPage(page: page, answers : answers)
+        then:
+        render.template == '/survey/surveyPageTpl'
+        render.model == [questions : [:], total : 0, answers : []]
     }
 }

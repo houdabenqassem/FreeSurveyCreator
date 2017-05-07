@@ -19,7 +19,7 @@ class SurveyController {
     def SurveyService surveyService
 
     def index(Integer max) {
-        service.loadSurveyJson()
+        surveyService.loadSurveyJson()
         params.max = Math.min(max ?: 10, 100)
         respond Survey.list(params), model:[surveyCount: Survey.count()]
     }

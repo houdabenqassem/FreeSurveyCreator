@@ -9,14 +9,24 @@ import spock.lang.Specification
 @TestFor(Answer)
 class AnswerSpec extends Specification {
 
+    def Answer answer
+
     def setup() {
+        answer = new Answer(questionId: 3, question: "What is the question?", answer : "This is an answer", questionType: "text")
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-        true == false
+    void "Test answer basics"() {
+        given:
+        setup()
+        when: "num questions is correct"
+        answer != null
+        then: "Validation returns false"
+        answer.questionId == "3"
+        answer.question == "What is the question?"
+        answer.answer == "This is an answer"
+        answer.questionType == "text"
     }
 }
