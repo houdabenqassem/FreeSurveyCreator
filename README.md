@@ -48,6 +48,11 @@ What requirements will not be handled by this application:
    
    **`ISSUE`** 
     
-   Spring security: After runnig the command: grails s2-quickstart com.fsc User Role --groupClassName=RoleGroup the domain classes were properly generated. However after adding the compile dependency in the build.gradle file: compile "org.grails.plugins:spring-security-core:3.1.1" the import: import grails.plugin.springsecurity.annotation.Secured does not resolve, hence could not use the annotation: @Secured([Role.ROLE_ADMIN, Role.ROLE_USER]) to secure the admin area to list the surveys.
-   
+   Spring security: Spring security: After running the command: grails s2-quickstart com.fsc User Role --groupClassName=RoleGroup the domain classes were properly generated. However after adding the compile dependency in the build.gradle file: compile "org.grails.plugins:spring-security-core:3.1.1" the import: import grails.plugin.springsecurity.annotation.Secured does not resolve, hence could not use the annotation: @Secured([Role.ROLE_ADMIN]) to secure the admin area to list the surveys. ** Noticed that from command line using grail compile the application compiles and then it can be run with: grails run-app, therefore the above issue could be an IDE issue For time being the @Secured([Role.ROLE_ADMIN]) is still not used cause the issues to authenticate. When trying to login the following error is thrown:
+                    
+                    2017-05-07 05:49:45.385 ERROR --- [nio-8080-exec-5] ailsUsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+                    
+                    org.springframework.security.authentication.InternalAuthenticationServiceException: No such property: authorities for class: com.fsc.Role Possible solutions: authority
+                    
+                    although the authority property is defined withing the Role class.
    
