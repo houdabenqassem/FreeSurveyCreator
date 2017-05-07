@@ -5,6 +5,7 @@ import grails.transaction.Transactional
 import static org.springframework.http.HttpStatus.*
 
 //import grails.plugin.springsecurity.annotation.Secured
+
 @Transactional(readOnly = true)
 class SurveyController {
 
@@ -159,7 +160,7 @@ class SurveyController {
         render(view: "submitSurvey")
     }
 
-    //@Secured([Role.ROLE_ADMIN, Role.ROLE_USER])
+    //@Secured([Role.ROLE_ADMIN])
     def listSurveyResults() {
         def surveys = surveyService.getSurveys();
 

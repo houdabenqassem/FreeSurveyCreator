@@ -44,7 +44,7 @@ What requirements will not be handled by this application:
    
    1. run the application
    open http://localhost:8080 to go to the survey page and fill out the survey.
-   2. once a number of surveys has been filled out, open http://localhost:8080/amin to go the admin area and view the list of surveys that have been filled out
+   2. once a number of surveys has been filled out, open http://localhost:8080/admin to go the admin area and view the list of surveys that have been filled out
    
    **`ISSUE`** 
     
